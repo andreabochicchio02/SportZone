@@ -1,0 +1,496 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/*INTESTAZIONE*/
+.bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 20%;
+    padding: 0.8em 2em 0.8em 3em;
+    background-color: #CFE5FF;
+    
+    font-size: 1vw;
+}
+
+.bar > img {
+    width: 16%;
+    height: 12%;
+} 
+
+#titolo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#titolo img {
+    width: 2.5em;
+    height: 2.5em;
+
+    margin-right: 2em;
+}
+
+
+#myButton{
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+    
+    height: 2.5em;
+    box-sizing: border-box;
+    
+    background-color: #6EA3DE;
+    border-radius: 30px;
+    border: none;
+    
+    cursor: pointer;
+    
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Solo per il bottone nella barra*/
+.bar > #myButton {
+    padding: 1em 0.7em;
+}
+
+#myButton img{
+    width: 1.5em;
+    height: 1.5em;
+
+    margin-right: 0.5em;
+}
+
+#myButton:hover{
+    box-shadow: 0 0 5px #176BB5;
+}
+
+
+/*Modalità visualizzazione*/
+#mod{
+    font-weight: bold;
+    font-size: 1.3em;
+    
+    height: 1.5em;
+    box-sizing: border-box;
+    
+    background-color: white;
+    color: #176BB5;
+    border: none;
+    
+    cursor: pointer;
+
+    margin-left: 3vw;
+    margin-top: 2vh;
+}
+
+#mod:hover{
+    font-size: 1.5em;
+    height: 1.4em;
+}
+
+#error{
+    font-size: 1.3em;
+    margin-left: 3.5vw;
+
+    color: #900;
+}
+
+
+
+/*Non ci sono partite*/
+body > h2{
+    position: absolute;
+    top: 40%;
+    left: 26%;
+    
+    width: 48%;
+    height: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+
+
+/*ELEMENTO GIORNATA O FASE*/
+h4, h5{
+    margin: 0;
+}
+
+h5{
+    font-size: 1em;
+}
+
+body > div{
+    width: 65%;
+    box-sizing: border-box;
+    margin-left: 3vw;
+
+    font-size: 1.3vw;
+}
+
+.risultati{
+    margin-bottom: 3em;
+    border-radius: 10px;
+    box-shadow: 0px 7px 10px 0px gray;
+
+    border-bottom: 5px solid #176BB5;
+}
+
+h3{
+    background-color: #176BB5;
+    color: white;
+
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+
+    margin-top: 1.4em;
+    margin-bottom: 0em;
+    padding: 0.3em 0em;
+    box-sizing: border-box;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/*ELEMENTO PARTITA*/
+.match{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+
+    border-bottom: 1px solid #176BB5;
+}
+
+.intestazione{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ris {
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ris_nd{
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.team {
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.intestazione .team:first-child{
+    text-align: right;
+}
+.intestazione .team:last-child{
+    text-align: left;
+}
+
+.where, .when {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.8em;
+}
+
+.where{
+    margin-top: 0.9em;
+}
+
+.when{
+    margin-top: 0.3em;
+}
+
+.where > img, .when > img{
+    width: 1.3em;
+    height: 1.3em;
+
+    margin-right: 0.8em;
+}
+
+
+
+/*CLASSIFICA*/
+#classifica{
+    position: absolute;
+    right: 0;
+    top: 17vh;
+    bottom: 4em;
+
+    width: 25%;
+    box-sizing: border-box;
+
+    text-align:	center;
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0px;
+
+    padding:0;
+
+    margin-right: 2em;
+}
+
+#classifica caption {
+	background-color: white;
+    font-weight: bolder;
+    font-size: 2em;
+    color: black;
+}
+
+#classifica th {
+    font-size: 1.1em;
+ 	font-weight: 600;
+ 	color: white;
+ 	background-color: #176BB5;
+
+ 	height: 1.8em;
+}
+
+#classifica tr {
+    background-color: white;
+}	
+
+#classifica td{
+    font-size: 1.1em;
+    height: 1.5em;
+}
+
+#classifica td:nth-child(1), 
+#classifica td:nth-child(2) {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#classifica tr:nth-child(even) {
+	background-color: #CFE5FF;
+}
+
+
+
+/*CALENDARIO*/
+#tab_calendario {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+    margin-top: 1.8vh;
+}
+
+#attuale {
+	background-color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: black;
+}
+
+#tab_calendario thead tr:nth-child(2){
+    font-size: 1.1em;
+ 	font-weight: 600;
+ 	color: white;
+ 	background-color: #176BB5;
+}
+
+#tab_calendario th{
+    border: 1px solid black;
+    width: 14.2%;
+}
+
+#tab_calendario .altro{
+    background-color: lightgrey;
+    font-size: 0.9em;
+    font-weight: lighter;
+}
+
+#tab_calendario td{
+    width: 14.2%;
+    height: 9.5vh;
+
+    border: 1px solid black;
+    padding: 0.3em;
+    padding-bottom: 0em;
+
+    vertical-align: top;
+    text-align: left;
+
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/*Le caselle dove ci sono eventi*/
+.evento {
+    position: relative;
+    cursor: pointer;
+}
+
+.evento .visibile{
+    background-color: #6EA3DE;
+    font-weight: lighter;
+    font-size: 0.8em;
+    margin: 0.5em 0em;
+    padding: 0.3em;
+
+    border-radius: 10px;
+}
+
+.evento .popup{
+    visibility: hidden;
+    white-space: nowrap;
+
+    background-color: #CFE5FF;
+    color: black;
+
+    font-size: 0.8em;
+    font-weight: bold;
+
+    text-align: left;
+    border-radius: 10px;
+    padding: 0.1em 1em;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 55%;
+    left: 20%;
+}
+
+.popup p{
+    margin: 0.2em 0em;
+}
+
+.evento:nth-child(6) .popup,
+.evento:nth-child(7) .popup{
+    left: -80%;
+}
+
+.evento:hover .popup {
+    visibility: visible;
+}
+
+/*Bottoni calandario*/
+#precedente, #successivo{
+    color: black;
+    font-weight: bold;
+    font-size: 0.7em;
+    
+    padding: 0.7em 1.3em;
+    margin-top: 1em;
+    box-sizing: border-box;
+    
+    background-color: #CFE5FF;
+    border-radius: 10px;
+    border: none;
+    
+    cursor: pointer;
+}
+
+#precedente:disabled, 
+#successivo:disabled{
+    background-color: lightgrey;
+    font-weight: lighter;
+
+    cursor:pointer;
+}
+
+#precedente{
+    float: left;
+}
+
+#successivo{
+    float: right;
+}
+
+
+
+/*USATA COME CLASSE PER TUTTI GLI ELEMENTI CHE NON DEVONO ESSERE VISIBILI*/
+.hide{
+    display: none;
+}
+
+
+/*Responsive*/
+@media screen and (orientation: portrait) {
+    .bar{
+        font-size: 2.3vw;
+    }
+    .bar > img {
+        display: none;
+    }
+    #titolo{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body > div{
+        width: 94%;
+    }
+    h3, #classifica, #mod, #error{
+        font-size: 3vw;
+    }
+    .match{
+        font-size: 2.5vw;
+    }
+    #calendario_partite{
+        font-size: 2.7vw;
+    }
+    #mod:hover{
+        font-size: 3.5vw;
+    }
+    #classifica{
+        position: static;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .evento:nth-child(6) .popup,
+    .evento:nth-child(7) .popup{
+    left: -240%;
+}
+}

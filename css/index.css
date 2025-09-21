@@ -1,0 +1,369 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+}
+
+/*----PAGINA INIZIALE----*/
+main {
+    background-image: url("../img/sfondo_trasparente.png");
+    background-position: center;
+    background-size: cover;   /*L'immagine si adatta all'intera area dell'elemento*/
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 70%;
+    height: 15%; 
+    margin: 5em 0em 0em 0em;
+}
+
+main > h1 {
+    font-size: 5em;
+}
+
+
+/*----PROPRIETA' COMUNI BOTTONI----*/
+/*Disposizione bottoni*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > button{
+    background-color: #6EA3DE;
+    border-radius: 30px;
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Input*/
+.torneo{
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+
+    color: black;
+
+    border-radius: 30px;
+    border: 3px solid #6EA3DE;
+    outline: none;
+
+    padding: 0.3em 1em 0.3em 1em;
+}
+
+/*Caratteristiche immagini dei bottoni*/
+.cerca > img, .accedi > img{
+    height: 35%;
+    width: 7%;
+}
+
+.invio > img, .chiudi > img {
+    width: 50%;
+    height: 55%;
+    margin: 0.3em 0em 0.2em 0em;
+}
+
+/*Invio e chiudi*/
+.invio, .chiudi {
+    width: 10%;
+    height: 95%;
+
+    border: none;
+    border-radius: 50%;
+    background-color: #6EA3DE;
+    cursor: pointer;
+
+    padding: 0.3em 0em;
+    margin-left: 0.3em;
+}
+
+
+/*----BOTTONI PAGINA INIZIALE----*/
+main > nav{
+    width: 40%;
+    height: 7%;
+}
+
+/*Bottoni Cerca e Crea*/
+main > nav > button {
+    width: 45%;
+    height: 100%;
+
+    color: black;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+main > nav > button:hover{
+    box-shadow: 0 0 5px #176BB5;
+}
+
+
+/*Input, Invio e chiudi*/
+main .nascosto{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Input*/
+.torneo{
+    font-size: 1.2em;
+}
+
+main .torneo::placeholder{
+    color: #900;
+}
+
+main .invio:hover, main .chiudi:hover{
+    box-shadow: 0 0 5px #176BB5;
+}
+
+
+/*Tasto "SCOPRI DI PIU'"*/
+#scopri{
+    background-color: transparent;
+    border: none;
+
+    font-size: 1em;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#scopri > img{
+    width: 27px;
+    height: 27px;
+}
+
+#scopri:hover{
+    transform: scale(1.1);
+}
+
+#scopri:disabled{
+    visibility: hidden;
+}
+
+
+/*BARRA NAVIGAZIONE*/
+.bar{
+    position: fixed;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 95vw;
+    height: 8vh;
+
+    padding-left: 2em;
+    padding-right: 2em;
+
+    background-color: #CFE5FF;
+}
+
+/*Logo*/
+.bar > img {
+    width: 15%;
+    height: 50%;
+} 
+
+/*Parte di destra*/
+.bar > nav {
+    width: 34%;
+    height: 95%;
+}
+
+.bar .cerca > img, .bar .accedi > img{
+    height: 50%;
+    width: 9%;
+}
+
+/*Bottoni Cerca e Crea*/
+header > nav > button {
+    width: 48%;
+    height: 60%;
+
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.bar button:hover{
+    transform: scale(1.1);
+}
+
+/*Input, Invio e chiudi*/
+header div{
+    width: 100%;
+    height: 65%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Input*/
+.bar .torneo {
+    font-size: 1em;
+    width: 100%;
+}
+
+.bar .torneo::placeholder{
+    color: #900;
+    font-size: 1em;
+}
+
+.bar .invio:hover, .bar .chiudi:hover{
+    transform: scale(1.1);
+}
+
+
+/*DESCRIZIONE APPLICAZIONE*/
+article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    
+    margin: 0em 3em;
+}
+
+article > h2 {
+    font-size: 2.3em;
+    width: 70%;
+}
+
+article > img {
+    width: 40%;
+    height: 80%;
+}
+
+
+article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+article:nth-child(odd) {
+    flex-direction: row;
+}
+
+footer{
+    background-color: #6EA3DE;
+    text-align: center;
+
+    padding: 1em 0em;
+}
+
+footer > a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+footer > a:hover{
+    font-size: large;
+}
+
+
+/*USATA COME CLASSE PER TUTTI GLI ELEMENTI CHE NON DEVONO ESSERE VISIBILI*/
+.hide{
+    display: none;
+}
+
+
+/*RESPONSIVE*/
+
+/*Pagina iniziale*/
+@media screen and (orientation: portrait) {
+    main {
+        height: 60vh;
+    }
+    #scopri{
+        font-size: 2em;
+    }
+    #logo{
+        height: 10%;
+    }
+    .invio > img, .chiudi > img {
+        width: 50%;
+        height: 75%;
+        margin: 0em 0em 0.2em 0em;
+    }
+}
+
+/*Bottoni pagina iniziale*/
+@media screen and (max-width: 800px) {
+    main > nav{
+        width: 67%;
+        height: 5%;
+
+    }
+    
+    main > nav > button,
+    main .torneo{
+        font-size: 2.1em;
+    }
+}
+
+/*Barra di navigazione*/
+@media screen and (max-width: 800px) {
+    .bar > img {
+        width: 28%;
+        height: 37%;
+    } 
+}
+
+@media screen and (max-width: 700px){    
+    /*Grandezza parte destra*/
+    .bar > nav{
+        width: 66%;
+        height: 70%;
+    }
+    
+    header > nav > button {
+        font-size: 2.4em;
+        height: 75%;
+    }
+
+    .bar .torneo{
+        font-size: 2em;
+    }
+    
+    .bar .cerca > img, .bar .accedi > img{
+        width: 13%;
+    }
+
+    .bar .invio > img, .bar .chiudi > img{
+        margin: 0;
+    }
+}
+
+/*Articoli*/
+@media screen and (orientation: portrait) {
+    article {
+        height: 35vh;
+        font-size: 1.5em;
+    }
+    article img{
+        height: 60%;
+    }
+}
+
+
+

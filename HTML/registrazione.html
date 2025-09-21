@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Sport Zone - Registrazione</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" type="image/x-icon" href="../img/logo_senza_sfondo.png">
+
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/registrazione.js"></script>
+</head>
+
+<body onload="begin()">
+    
+        <form novalidate id="container">
+            <h2>Registrazione</h2>
+            
+            <input type="text" name="user" id="username" placeholder="Username">
+            <span class="error"></span>                 <!--Usato per gli errori di tutti gli input-->
+            
+            <input type="email" name="mail" id="mail" placeholder="Email">
+            <span class="error"></span>
+
+            <div class="box-pass">
+                <input type="password" name="pass" id="password" placeholder="Password">
+                
+                <button  id="view_pass">
+                    <img src="../img/view.png" alt="view_pass">
+                </button>
+            </div>
+            <span class="error"></span>
+        
+            <div class="box-pass">
+                <input type="password" name="confirm_pass" id="confirm_pass" placeholder="Ripeti password">
+                
+                <button id="view_conf">
+                    <img src="../img/view.png" alt="view_conf">
+                </button>
+            </div>
+            <span class="error"></span>
+
+            <span class="error"></span>
+            <input type="button" value="Iscriviti" id="myButton">
+        </form>
+</body>
+</html>

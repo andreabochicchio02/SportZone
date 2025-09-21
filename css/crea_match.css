@@ -1,0 +1,467 @@
+body{
+    height: 100vh;
+    width: 100vw;
+
+    padding: 0;
+    margin: 0;
+    
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden; /*Barra Menu'*/
+}
+
+/*BARRA SUPERIORE*/
+.bar{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 73px;
+
+    padding: 0em 1em 0em 2em;
+    background-color: #CFE5FF;
+}
+
+/*Logo*/
+.bar > img {
+    height: 50%;
+    width: 18%;
+
+    margin-top: 15px;
+    margin-left: 2%;
+    float: left;
+} 
+
+/*Elemento centrale*/
+#guida{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);     /*Deve spostarsi se diminuisce la finistra*/
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: white;
+    border-radius: 30px;
+    height: 3em;
+    width: 191px;
+
+    margin-top: 12px;
+}
+
+#guida p{
+    padding: 0em 1.1em;
+    border-radius: 30px;
+
+    height: 3em;
+    font-weight: bold;
+    
+    display: flex;
+    align-items: center;
+
+    background-color: #6EA3DE;
+}
+
+
+#guida img{
+    width: 47%;
+    height: 47%;
+
+    padding: 0em 1em;
+}
+
+.bar > #myButton{
+    padding: 0;
+    margin-top: 20px;
+    margin-right: 1vw;
+
+    float: right;
+
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.bar > #myButton > img{
+    width: 2em;
+    height: 2em;
+}
+
+/*Proprietà barra menu' nascosta*/
+#menu {
+    position: absolute;
+    right: -20em;
+    top: 73px;
+    transition: right 0.3s ease-in-out;
+
+    background-color: #CFE5FF;
+
+    height: 11em;
+    width: 20em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 1em;
+}
+
+#menu:hover,
+#myButton:hover + #menu {
+    right: 0em;
+}
+
+#menu ul {
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+#menu li{
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-top: 0.7em;
+    font-weight: bold;
+}
+
+#menu a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/*NOME TORNEO*/
+#titolo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1vw;
+    width: 100%;
+}
+
+#titolo > img{
+    width: 2.5%;
+    height: 2.5%;
+    
+    margin-right: 3em;
+}
+
+#titolo > h1{
+    font-size: 2.5em;
+    margin: 0;
+}
+
+
+
+
+/*Sezione presente solo se non ci sono partite*/
+#vuoto{
+    box-sizing: border-box;
+    width: 100%;
+    height: 80%;
+    padding: 0% 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 1vw;
+}
+
+
+/*BOTTONI AGGIUNGI PARTITA O AGGIUNGI RISULTATO*/
+.open {
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+
+    height: 2.5em;
+    width: 7em;
+
+    background-color: #6EA3DE;
+    border-radius: 30px;
+    border: none;
+
+    cursor: pointer;
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.open img{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.open:hover{
+    box-shadow: 0 0 5px #176BB5;
+}
+
+body .open{
+    width: 11.5em;
+}
+
+
+h2{
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+
+/*LA SEZIONE DEL PUPUP*/
+.popup {
+    display: none;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    
+    overflow-y: scroll;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    font-size: 1em;
+}
+
+
+#form_partita, #form_risultato{
+    width: 450px;
+
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 1.5em 2.5em;
+    
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/*PROPRIETA' POPUP PARTITA*/
+#form_partita input, #form_partita select, 
+#form_risultato input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em 0.6em;
+    margin-top: 0.2em;
+    margin-bottom: 1.2em;
+
+    outline: none;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+#form_partita label, #form_risultato input{
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#form_partita input:focus{
+    border: 1px solid #176BB5;
+    box-shadow: 0 0 0.2em #176BB5;
+}
+
+#form_partita input[type="date"],
+#form_partita input[type="time"]{
+    padding: 0.3em 0.6em;
+    font-size: 1.3em;
+}
+
+.invio{
+    width: 100%;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    
+    background-color: #6EA3DE;
+    
+    border-radius: 5px;
+    margin-top: 0.8em;
+    
+    padding: 0.4em;
+}
+
+.invio:hover{
+    border: 1px solid #176BB5;
+    box-shadow: 0 0 0.2em #176BB5;
+}
+
+#error_partita, #error_ris{
+    color: #900;
+}
+
+.chiudi{
+    width: 8%;
+    height: 7%;
+
+    border: none;
+    background-color: transparent;
+
+    position: absolute;
+    top: 2.5%;
+    left: 90%;
+
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.chiudi > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+/*PROPRIETA' ELEMENTO PARTITA*/
+h3{
+    background-color: #176BB5;
+    color: white;
+
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+
+    margin-top: 2em;
+    margin-bottom: 0em;
+    padding: 0.3em 0em;
+    box-sizing: border-box;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.risultati{
+    border-bottom: 0.5em solid #176BB5;
+    box-shadow: 0px 7px 10px 0px gray;
+    margin-bottom: 3em;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h4, h5{
+    margin: 0;
+}
+
+h5{
+    font-weight: lighter;
+    font-size: 1.1em;
+}
+
+.match{
+    box-sizing: border-box;
+    width: 100%;
+
+    border-bottom: 1px solid #176BB5;
+
+    padding: 10px;
+}
+
+.intestazione{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Bottone Aggiungi risultato (altre proprietà comuni)*/
+.match .open{
+    margin: 0em 8em;
+}
+
+.ris {
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.team {
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.intestazione .team:first-child{
+    text-align: right;
+}
+.intestazione .team:last-child{
+    text-align: left;
+}
+
+.where, .when {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.where{
+    margin-top: 0.9em;
+}
+
+.when{
+    margin-top: 0.3em;
+}
+
+.where > img, .when > img{
+    width: 1.3em;
+    height: 1.3em;
+
+    margin-right: 0.8em;
+}
+
+/*Responsive*/
+@media screen and (orientation: portrait) {
+    .bar > img{
+        display: none;
+    }
+    #titolo > h1{
+        font-size: 6vw;
+    }
+    #titolo > img{
+        width: 8%;
+        height: 8%;
+    }
+    #vuoto{
+        padding: 0%;
+        font-size: 2.5vw;
+    }
+    #form_partita, #form_risultato{
+        width: 80%;
+        font-size: 0.9em;
+    }
+    .match .open{
+        margin: 0em 2em;
+    }
+    .risultati{
+        font-size: 3vw;
+    }
+}

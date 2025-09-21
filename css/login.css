@@ -1,0 +1,194 @@
+/*Foglio di stile usato per login.php e registrazione.html*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url(../img/sfondo.png);
+    background-position: center;
+    background-size: cover;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+}
+
+/*Contenitore form*/
+#container{
+    padding: 3.5em 4.5em;
+    width: 26%;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 3em rgba(0,0,0,0.5);
+}
+
+#container, form{
+    display: flex;
+    flex-direction: column;
+}
+
+#container h2{
+    margin-top: 0;
+
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+}
+
+input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75em 1em;
+    margin-top: 0.5em;
+
+    outline: none;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+input:hover{
+    border: 2px solid #176BB5;
+}
+
+/*Stile campi input sbagliati*/
+.errorstyle {
+    border-color: #900;
+    background-color: #FDD;
+}
+
+/*Stile messaggio errore*/
+.error{
+    width : 100%;
+    font-size: 1em;
+    color: #900;
+    box-sizing: border-box;
+    padding: 0.7em;
+}
+
+.error.active {
+    padding: 0.2em 0em 0em 0em;
+}
+
+/*Il div che contiene input e bottone show*/
+.box-pass{
+    display: flex;
+    flex-direction: row;
+
+    background-color: transparent;
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+
+/*Tolgo la proprietà che avevo inserito prima ad input*/
+.box-pass > input{
+    margin: 0em;
+    width: 90%;
+
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.box-pass:hover > input, 
+.box-pass:hover > button{
+    border: 2px solid #176BB5;
+}
+
+.box-pass:hover > input{
+    border-right: 0px;
+}
+
+.box-pass:hover > button{
+    border-left: 0px;
+}
+
+.box-pass > button{
+    width: 10%;
+    padding: 0;
+    cursor: pointer;
+
+    background-color: white;
+    border: 2px solid black;
+    border-left: none;
+
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.box-pass > .errorstyle,
+.box-pass > .errorstyle ~ * {           /*Cambio lo stile al bottone*/
+    border-color: #900;
+    background-color: #FDD;
+}
+
+button > img{
+    width: 60%;
+    height: 55%;
+}
+
+
+/*BOTTONE INVIO*/
+#myButton{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    color: black;
+    font-size: 1.6em;
+    font-weight: bold;
+    
+    background-color: #6EA3DE;
+
+    border-radius: 5px;
+    margin-top: 0;
+
+    padding: 0.4em;
+}
+
+#myButton:hover{
+    border: 1px solid #176BB5;
+    box-shadow: 0 0 0.2em #176BB5;
+}
+
+#myButton:disabled {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+
+    box-shadow: 0 0 0;
+}
+
+/*Per crea un nuovo account della pagina di accesso*/
+a{
+    color: black;
+    text-decoration: none;
+}
+
+section > a{
+    margin-top: 1.3em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#reg{
+    font-weight: bold;
+}
+
+/*Responsive*/
+@media screen and (max-width: 800px) {
+    #container {
+        width: 50%;
+        font-size: 2vw;
+    }
+}

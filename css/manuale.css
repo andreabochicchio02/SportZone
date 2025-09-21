@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body>img{
+    width: 250px;
+    height: 5%;
+    margin-bottom: 1em;
+}
+
+h3{
+    margin-bottom: 0em;
+}
+
+ol{
+    margin-top: 0.5em;
+}
+
+.pagine{
+    font-weight: bold;
+    color: #176BB5;
+    font-size: 1.1em;
+}
+
+.bottoni{
+    color: black;
+    background-color: #6EA3DE;
+    padding: 0.2em;
+    border-radius: 10px;
+}

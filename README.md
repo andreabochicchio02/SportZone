@@ -6,10 +6,13 @@ SportZone is an online platform designed to help users organize sports tournamen
 
 ## Screenshots
 
-<div style="display: flex; justify-content: space-around;">
-    <img src="screen/main.png" alt="Main Page" style="width: 45%;">
-    <img src="screen/dashboard.png" alt="Dashboard" style="width: 45%; height: 75%">
-</div>
+### Main Page
+![Main Page](screen/main.png)
+
+### Dashboard
+![Dashboard](screen/dashboard.png)
+
+
 
 ## Features
 
